@@ -1,0 +1,9 @@
+footer {
+    border-top: 2px solid black;
+}
+
+.Final {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="description" content="Portfolio para exposição de projetos.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio v2</title>
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div>
+                <p>
+                    < Pedro />
+                </p>
+            </div>
+            <div class="nav-menu">
+                <div class="menu-01">
+                    <ul>
+                        <li><a class="scroll-link" href="#Home">Home</a></li>
+                        <li><a class="scroll-link" href="#About">About</a></li>
+                        <li><a class="scroll-link" href="#Services">Services</a></li>
+                        <li><a class="scroll-link" href="#Projects">Projects</a></li>
+                        <li><a class="scroll-link" href="#Contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="hamburger" id="hamburger" onclick="HideMenu()">
+                    <img src="IMG/icons8-cardápio.svg" alt="menu">
+                </div>
+
+                <div class="tags" id="tags">
+                    <ul class="tags-secundarias" id="tags-secundarias">
+                        <li><a class="scroll-link" href="#Home">Home</a></li>
+                        <li><a class="scroll-link" href="#About">About</a></li>
+                        <li><a class="scroll-link" href="#Services">Services</a></li>
+                        <li><a class="scroll-link" href="#Projects">Projects</a></li>
+                        <li><a class="scroll-link" href="#Contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home" id="Home">
+
+            <div class="home-container">
+
+                <div class="home-text">
+
+                    <p class="home-01">Hello, I’m <span>Pedro Arthur</span></p>
+                    <p class="home-02">Desenvolvidor Front-End</p>
+                    <a class="one" href="Currículo.pdf" download="Currículo.pdf">CV</a>
+                    <div class="home-icons">
+                        <img src="IMG/icons8-instagram.svg" alt="icon instagram">
+                        <img src="IMG/icons8-github.svg" alt="icon GitHub">
+                    </div>
+                </div>
+                <div class="home-img">
+                    <img src="IMG/pedro.jpg" alt="Desenvolvidor Pedro Arthur">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="About" id="About">
+
+        <p class="primeiro">About</p>
+
+        <div class="About-container">
+
+            <div class="About-img"><img src="IMG/pedro.jpg" alt="pedrinho"></div>
+
+            <div class="About-text">
+                <p>Hi, I'm Pedro Arthur, I've been working with web development for about a year. I really enjoyed the
+                    front-end area, where I seek to improve and refine my skills. I'm currently studying science and
+                    technology at the Federal University UFERSA.</p>
+                <div>
+                    <button id="openModal" type="button">PT-BR</button>
+                </div>
+                <div class="About-modal" id="About-modal">
+                    <div class="About-content">
+                        <span class="close">&times;</span>
+                        <p>Olá, sou Pedro Arthur, trabalho com desenvolvimento web há cerca de um ano. Gostei muito da
+                            área do front-end, onde busco aprimorar e refinar minhas habilidades. Atualmente, estou
+                            cursando ciência e tecnologia na Universidade Federal UFERSA.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Services" id="Services">
+
+        <p class="primeiro">Services</p>
+
+        <div class="Services-container">
+            <div class="Services-box">
+                <img src="IMG/icons8-html.svg" alt="HTML">
+                <p>HTML</p>
+            </div>
+            <div class="Services-box">
+                <img src="IMG/icons8-css.svg" alt="CSS">
+                <p>CSS</p>
+            </div>
+            <div class="Services-box">
+                <img src="IMG/icons8-js.svg" alt="JAVASCRIPT">
+                <p>JAVASCRIPT</p>
+            </div>
+            <div class="Services-box">
+                <img src="IMG/icons8-tailwind-css.svg" alt="TAILWIND">
+                <p>TAILWIND</p>
+            </div>
+            <div class="Services-box">
+                <img src="IMG/icons8-c.svg" alt="C">
+                <p>C</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="Projects" id="Projects">
+        <p class="primeiro">Projects</p>
+        <div class="Projects-container">
+            <div class="Projetos-box" onclick="abrirProjeto('https://arthurpedr.github.io/Projeto-Yu-Gi-Oh/')">
+                <img src="IMG/YU-GI-OH.png" alt="YU-GI-OH">
+                <div class="Projetos-modal">
+                    <p>Projeto Cards YU-GI-OH</p>
+                </div>
+            </div>
+            <div class="Projetos-box" onclick="abrirProjeto('https://arthurpedr.github.io/Tela-De-Login/')">
+                <img src="IMG/login.png" alt="Tela-De-Login">
+                <div class="Projetos-modal">
+                    <p>Projeto Tela de Login</p>
+                </div>
+            </div>
+            <div class="Projetos-box" onclick="abrirProjeto('https://arthurpedr.github.io/Previs-o-do-Tempo/')">
+                <img src="IMG/Previsão_do_Tempo.png" alt="Previsão_do_Tempo">
+                <div class="Projetos-modal">
+                    <p>Projeto Previsão do Tempo</p>
+                </div>
+            </div>
+            <div class="Projetos-box">
+                <img src="IMG/clone_banco.png" alt="Clone do Banco do Brasil">
+                <div class="Projetos-modal">
+                    <p>Projeto Banco do Brasil</p>
+                </div>
+            </div>
+            <div class="Projetos-box">
+                <img src="IMG/borboleta.webp" alt="borboleta">
+                <div class="Projetos-modal">
+                    <p>titulo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Contact" id="Contact">
+        <p class="primeiro">Contact</p>
+
+        <div class="Contact-container">
+
+            <form action="https://formspree.io/f/mjkgonza" class="conteiner-contato" id="meuFormulario" method="POST">
+
+                <div class="input-container">
+                    <input type="text" id="nome" name="nome" placeholder=" " autocomplete="off" required>
+                    <label for="nome">Nome</label>
+                </div>
+
+
+                <div class="input-container">
+                    <input type="email" id="email" name="email" placeholder=" " autocomplete="off" required>
+                    <label for="email">E-mail</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="text" id="mensagem" name="mensagem" placeholder=" " autocomplete="off" required>
+                    <label for="mensagem">Mensagem</label>
+                </div>
+
+                <button class="final" type="submit">Enviar mensagem</button>
+            </form>
+            <p id="mensagemSucesso"></p>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="Final">
+            <p>&copy; 2025 All Rights Reserved by Pedro Arthur</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
