@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: var(--bg-home);
 }
 
 .home-container{
@@ -24,12 +24,14 @@
 }
 
 .home-01{
+    color: var(--text-01);
     font-size: 60px;
     font-weight: 600;
 }
 
 .home-02{
     font-size: 24px;
+    color: var(--text-02);
 }
 
 span{
@@ -40,8 +42,20 @@ span{
     display: flex;
 }
 
-.home-icons img{
+.instagram{
     width: 50px;
+    height: 50px;
+    background-image: var(--bg-instagram);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.github{
+    width: 50px;
+    height: 50px;
+    background-image: var(--bg-github);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .home-img{
@@ -51,7 +65,7 @@ span{
 .one{
     width: 100px;
     background-color: blue;
-    color: white;
+    color: var(--color--button);
     border: none;
     font-size: 18px;
     padding: 5px;
@@ -61,8 +75,9 @@ span{
 }
 
 .one:hover{
-    background-color: black;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    color: var(--color--button);
+    background-color: var(--h-button);
+    box-shadow: 0px 4px 10px var(--box-shadow);
     cursor: pointer;
     transform: translateY(-15%);
     transition: all 0.2s ease-in-out;
@@ -71,6 +86,39 @@ span{
 .home-img img{
     width: 500px;
     border-radius: 50%;
+}
+
+:root{
+    --bg-instagram: url('../IMG/icons8-instagram.svg');
+    --bg-github: url('../IMG/icons8-github.svg');
+    --bg-home:#f5f5f5;
+    --text-01:black;
+    --text-02:black;
+    --h-button:black;
+    --color--button:rgb(255, 255, 255);
+    --box-shadow: rgba(0, 0 ,0, 0.4);
+}
+
+body.dark-theme {
+    --bg-instagram: url('../IMG/branco-instagram.svg');
+    --bg-github: url('../IMG/branco-github.svg');
+    --bg-home:#000000;
+    --text-01:rgb(255, 255, 255);
+    --text-02:rgb(255, 255, 255);
+    --h-button:rgb(255, 255, 255);
+    --color--button:rgb(0, 0, 0);
+    --box-shadow: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="dark"] {
+    --bg-instagram: url('../IMG/branco-instagram.svg');
+    --bg-github: url('../IMG/branco-github.svg');
+    --bg-home:#000000;
+    --text-01:rgb(255, 255, 255);
+    --text-02:rgb(255, 255, 255);
+    --h-button:rgb(255, 255, 255);
+    --color--button:rgb(0, 0, 0);
+    --box-shadow: rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 1024px) {

@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: var(--bg--projectes);
 }
 
 .primeiro{
@@ -52,6 +53,18 @@
 
 .Projetos-box:hover .Projetos-modal{
     display: block;
+}
+
+:root{
+    --bg--projectes:white;
+}
+
+body.dark-theme {
+    --bg--projectes:rgb(0, 0, 0);
+}
+
+[data-theme="dark"] {
+    --bg--projectes:rgb(0, 0, 0);
 }
 
 @media (max-width: 1100px) {

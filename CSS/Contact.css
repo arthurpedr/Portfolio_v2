@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #f5f5f5;
+    background-color: var(--bg-contate);
 }
 
 .primeiro{
@@ -32,7 +32,7 @@ form{
     border-radius: 10px;
     padding: 10px;
     background: transparent;
-    border: 2px solid black;
+    border: 2px solid var(--b-input);
 }
 
 #mensagem {
@@ -54,7 +54,7 @@ label {
     left: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    color: black;
+    color: var(--c-label);
     pointer-events: none;
     transition: 0.3s ease-in-out;
     
@@ -77,21 +77,49 @@ input:not(:placeholder-shown) ~ label {
     cursor: pointer;
     font-size: 16px;
     background: blue;
-    color: white;
+    color: var(--color--button);
     text-align: center;
 }
 
 .final:hover {
-    background-color: black;
+    color: var(--color--button);
+    background-color: var(--h-button);
     transition: all 0.2s ease;
     transform: translateY(-15%);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 10px var(--box-shadow);
 }
 
 .MesagemSucesso {
     display: none;
     color: green;
     font-weight: bold;
+}
+
+:root{
+    --bg-contate:#f5f5f5;
+    --b-input:black;
+    --c-label:black;
+    --color--button:rgb(255, 255, 255);
+    --h-button:black;
+    --box-shadow: rgba(0, 0 ,0, 0.4);
+}
+
+body.dark-theme {
+    --bg-contate:#000000;
+    --b-input:rgb(255, 255, 255);
+    --c-label:rgb(255, 255, 255);
+    --color--button:rgb(0, 0, 0);
+    --h-button:rgb(255, 255, 255);
+    --box-shadow: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="dark"] {
+    --bg-contate:#000000;
+    --b-input:rgb(255, 255, 255);
+    --c-label:rgb(255, 255, 255);
+    --color--button:rgb(0, 0, 0);
+    --h-button:rgb(255, 255, 255);
+    --box-shadow: rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 1130px) {

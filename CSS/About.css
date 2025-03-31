@@ -5,9 +5,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: var(--bg-about);
 }
 
 .primeiro{
+    color:var(--primeiro);
     font-size: 26px;
     font-weight: 600;
 }
@@ -35,23 +37,25 @@
 }
 
 .About-text p{
+    color:var(--text);
     font-size: 20px;
 }
 
 #openModal{
     width: 100px;
     padding: 5px;
-    color: white;
+    color: var(--color--button);
     background-color: blue;
     border: none;
     border-radius: 5px;
 }
 
 #openModal:hover{
-    background-color: black;
+    color: var(--color--button);
+    background-color: var(--h-button);
     transition: all 0.2s ease;
     transform: translateY(-15%);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 10px var(--box-shadow);
 }
 
 .About-modal{
@@ -65,13 +69,13 @@
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.71);
-    color: white;
+    color: var(--c-modal);
     text-align: center;
     transition: all 0.5s ease-in-out;
 }
 
 .About-content{
-    background: white;
+    background: var(--modal);
     padding: 20px;
     border-radius: 8px;
     width: 300px;
@@ -86,6 +90,39 @@
     font-size: 24px;
     cursor: pointer;
 }
+
+:root{
+ --bg-about:white;
+ --primeiro:black;
+ --text: black;
+ --h-button:black;
+ --color--button:rgb(255, 255, 255);
+ --box-shadow: rgba(0, 0 ,0, 0.4);
+ --modal:white;
+ --c-modal:white;
+}
+
+body.dark-theme {
+ --bg-about:rgb(0, 0, 0);
+ --primeiro:rgb(255, 255, 255);
+ --text: rgb(255, 255, 255);
+ --h-button:rgb(255, 255, 255);
+ --color--button:rgb(0, 0, 0);
+ --box-shadow: rgb(255, 255, 255);
+ --modal:rgb(0, 0, 0);
+ --c-modal:rgb(0, 0, 0);
+}
+
+[data-theme="dark"] {
+    --bg-about:rgb(0, 0, 0);
+    --primeiro:rgb(255, 255, 255);
+    --text: rgb(255, 255, 255);
+    --h-button:rgb(255, 255, 255);
+    --color--button:rgb(0, 0, 0);
+    --box-shadow: rgb(255, 255, 255);
+    --modal:rgb(0, 0, 0);
+    --c-modal:rgb(0, 0, 0);
+   }
 
 @media (max-width: 1024px) {
     .About-text{

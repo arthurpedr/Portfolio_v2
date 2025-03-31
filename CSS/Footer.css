@@ -1,9 +1,26 @@
 footer {
-    border-top: 2px solid black;
+    border-top: 2px solid var(--color);
+    background-color: var(--bg-footer);
 }
 
 .Final {
+    color: var(--color);
     display: flex;
     justify-content: center;
     padding: 10px;
+}
+
+:root{
+    --bg-footer:white;
+    --color:black;
+}
+
+body.dark-theme {
+    --bg-footer:rgb(0, 0, 0);
+    --color:rgb(255, 255, 255);
+}
+
+[data-theme="dark"] {
+    --bg-footer:rgb(0, 0, 0);
+    --color:rgb(255, 255, 255);
 }
