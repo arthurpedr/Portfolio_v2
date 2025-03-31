@@ -112,3 +112,16 @@ function abrirProjeto(url) {
 function abrirLink(url) {
     window.open(url, '_blank');
 }
+
+// button dark mode
+const toggleTheme = document.getElementById('toggle-theme');
+
+toggleTheme.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+
+    if (document.body.classList.contains('dark-theme')) {
+        toggleTheme.textContent = '🌞';
+    } else {
+        toggleTheme.textContent = '🌙';
+    }
+});
