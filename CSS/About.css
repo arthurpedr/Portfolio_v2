@@ -137,3 +137,8 @@ body.dark-theme {
         height: 130vh;
     }
 }
+@media (max-width: 500px) {
+    #openModal{
+        background-color: black;
+    }
+}

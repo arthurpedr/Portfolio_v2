@@ -136,3 +136,9 @@ body.dark-theme {
         width: 400px;
     }
 }
+
+@media (max-width: 500px) {
+    .one{
+        background-color: black;
+    }
+}
