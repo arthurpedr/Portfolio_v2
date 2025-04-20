@@ -79,7 +79,7 @@ body.dark-theme {
 
 @media (max-width: 764px) {
     .Projects{
-        height: 170vh !important;
+        height: 200vh !important;
     }
     .Projects-container {
         width: 350px;
