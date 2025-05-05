@@ -8,10 +8,21 @@
     background-color: var(--bg-about);
 }
 
-.primeiro{
-    color:var(--primeiro);
-    font-size: 26px;
+.primeiro-01{
+    color:var(--titulo);
+    font-size: 104px;
     font-weight: 600;
+    position: relative;
+}
+
+.primeiro-01:before{
+    content: attr(titulo);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--primeiro);
+    font-size: 64px;
 }
 
 .About-container{
@@ -45,7 +56,7 @@
     width: 100px;
     padding: 5px;
     color: var(--color--button);
-    background-color: blue;
+    background-color: var(--bg-button-02);
     border: none;
     border-radius: 5px;
 }
@@ -93,7 +104,9 @@
 
 :root{
  --bg-about:white;
+ --titulo:rgba(0, 0, 0, 0.216);
  --primeiro:black;
+ --bg-button-02: blue;
  --text: black;
  --h-button:black;
  --color--button:rgb(255, 255, 255);
@@ -104,7 +117,9 @@
 
 body.dark-theme {
  --bg-about:rgb(0, 0, 0);
+ --titulo:rgba(255, 255, 255, 0.218);
  --primeiro:rgb(255, 255, 255);
+ --bg-button-02: white;
  --text: rgb(255, 255, 255);
  --h-button:rgb(255, 255, 255);
  --color--button:rgb(0, 0, 0);
@@ -115,7 +130,9 @@ body.dark-theme {
 
 [data-theme="dark"] {
     --bg-about:rgb(0, 0, 0);
+    --titulo:rgba(255, 255, 255, 0.218);
     --primeiro:rgb(255, 255, 255);
+    --bg-button-02: white;
     --text: rgb(255, 255, 255);
     --h-button:rgb(255, 255, 255);
     --color--button:rgb(0, 0, 0);
@@ -140,5 +157,11 @@ body.dark-theme {
 @media (max-width: 500px) {
     #openModal{
         background-color: black;
+    }
+    .primeiro-01{
+        font-size: 84px;
+    }
+    .primeiro-01:before{
+        font-size: 44px;
     }
 }

@@ -120,7 +120,7 @@ toggleTheme.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
 
     if (document.body.classList.contains('dark-theme')) {
-        toggleTheme.textContent = '🌞';
+        toggleTheme.textContent = '☀️';
     } else {
         toggleTheme.textContent = '🌙';
     }

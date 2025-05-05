@@ -64,7 +64,7 @@ span{
 
 .one{
     width: 100px;
-    background-color: blue;
+    background-color: var(--bg-button-01);
     color: var(--color--button);
     border: none;
     font-size: 18px;
@@ -92,6 +92,7 @@ span{
     --bg-instagram: url('../IMG/icons8-instagram.svg');
     --bg-github: url('../IMG/icons8-github.svg');
     --bg-home:#f5f5f5;
+    --bg-button-01: blue;
     --text-01:black;
     --text-02:black;
     --h-button:black;
@@ -103,6 +104,7 @@ body.dark-theme {
     --bg-instagram: url('../IMG/branco-instagram.svg');
     --bg-github: url('../IMG/branco-github.svg');
     --bg-home:#000000;
+    --bg-button-01: white;
     --text-01:rgb(255, 255, 255);
     --text-02:rgb(255, 255, 255);
     --h-button:rgb(255, 255, 255);

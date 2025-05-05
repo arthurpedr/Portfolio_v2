@@ -8,9 +8,21 @@
     background-color: var(--bg--projectes);
 }
 
-.primeiro{
-    font-size: 26px;
+.primeiro-03{
+    color:var(--titulo);
+    font-size: 108px;
     font-weight: 600;
+    position: relative;
+}
+
+.primeiro-03:before{
+    content: attr(titulo);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--primeiro);
+    font-size: 64px;
 }
 
 .Projects-container{
@@ -57,14 +69,17 @@
 
 :root{
     --bg--projectes:white;
+    --titulo:rgba(0, 0, 0, 0.216);
 }
 
 body.dark-theme {
     --bg--projectes:rgb(0, 0, 0);
+    --titulo:rgba(255, 255, 255, 0.218);
 }
 
 [data-theme="dark"] {
     --bg--projectes:rgb(0, 0, 0);
+    --titulo:rgba(255, 255, 255, 0.218);
 }
 
 @media (max-width: 1100px) {
@@ -84,5 +99,11 @@ body.dark-theme {
     .Projects-container {
         width: 350px;
         grid-template-columns: 1fr;
+    }
+    .primeiro-03{
+        font-size: 84px;
+    }
+    .primeiro-03:before{
+        font-size: 44px;
     }
 }

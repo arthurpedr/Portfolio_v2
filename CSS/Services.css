@@ -8,9 +8,21 @@
     background-color: var(--bg-services);
 }
 
-.primeiro{
-    font-size: 26px;
+.primeiro-02{
+    color:var(--titulo);
+    font-size: 108px;
     font-weight: 600;
+    position: relative;
+}
+
+.primeiro-02:before{
+    content: attr(titulo);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--primeiro);
+    font-size: 64px;
 }
 
 .Services-container{
@@ -61,6 +73,7 @@
 
 :root{
     --bg-services:#f5f5f5;
+    --titulo:rgba(0, 0, 0, 0.216);
     --c-text: #000000;
     --html:url('../IMG/icons8-html.svg');
     --css: url('../IMG/icons8-css.svg');
@@ -72,6 +85,7 @@
 
 body.dark-theme {
     --bg-services:#000000;
+    --titulo:rgba(255, 255, 255, 0.218);
     --c-text: #fff;
     --html:url('../IMG/icons8-html-5.svg');
     --css: url('../IMG/css-white.svg');
@@ -83,6 +97,7 @@ body.dark-theme {
 
 [data-theme="dark"] {
     --bg-services:#000000;
+    --titulo:rgba(255, 255, 255, 0.218);
     --c-text: #fff;
     --html:url('../IMG/icons8-html-5.svg');
     --css: url('../IMG/css-white.svg');
@@ -90,4 +105,13 @@ body.dark-theme {
     --tailwind: url('../IMG/tailwind-white.svg');
     --react: url('../IMG/react-white.svg');
     --c: url('../IMG/c-white.svg');
+}
+
+@media (max-width: 500px) {
+    .primeiro-02{
+        font-size: 84px;
+    }
+    .primeiro-02:before{
+        font-size: 44px;
+    }
 }
