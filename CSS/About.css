@@ -6,6 +6,7 @@
     align-items: center;
     flex-direction: column;
     background-color: var(--bg-about);
+    padding-bottom: 20px;
 }
 
 .primeiro-01{
@@ -33,6 +34,11 @@
     gap: 90px;
     flex-wrap: wrap;
     margin-top: 50px;
+}
+
+.About-img{
+    display: flex;
+    justify-content: center;
 }
 
 .About-img img{
@@ -149,11 +155,6 @@ body.dark-theme {
         font-size: 18px;
     }
 }
-@media (max-width: 805px) {
-    .About{
-        height: 130vh;
-    }
-}
 @media (max-width: 500px) {
     #openModal{
         background-color: black;
@@ -163,5 +164,8 @@ body.dark-theme {
     }
     .primeiro-01:before{
         font-size: 44px;
+    }
+    .About-img img{
+        width: 80%;
     }
 }

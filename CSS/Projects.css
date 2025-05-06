@@ -86,15 +86,12 @@ body.dark-theme {
     .Projects-container{
         width: 700px;
         grid-template-columns: repeat(2, 1fr);
-    }
-    .Projects{
-        height: 130vh;
-    }
+    }  
 }
 
 @media (max-width: 764px) {
     .Projects{
-        height: 200vh !important;
+        height: 100%;
     }
     .Projects-container {
         width: 350px;

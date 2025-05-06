@@ -58,10 +58,6 @@ span{
     background-repeat: no-repeat;
 }
 
-.home-img{
-    display: flex;
-}
-
 .one{
     width: 100px;
     background-color: var(--bg-button-01);
@@ -81,6 +77,11 @@ span{
     cursor: pointer;
     transform: translateY(-15%);
     transition: all 0.2s ease-in-out;
+}
+
+.home-img{
+    display: flex;
+    justify-content: center;
 }
 
 .home-img img{
@@ -125,7 +126,7 @@ body.dark-theme {
 
 @media (max-width: 1024px) {
     .home{
-        height: 150vh;
+        width: 150vh;
         text-align: center;
     }
     .home-text{
@@ -134,13 +135,13 @@ body.dark-theme {
         align-items: center;
         text-align: center;
     }
-    .home-img img{
-        width: 400px;
-    }
 }
 
 @media (max-width: 500px) {
     .one{
         background-color: black;
+    }
+    .home-img img{
+        width: 80%;
     }
 }
