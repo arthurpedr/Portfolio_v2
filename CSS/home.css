@@ -126,8 +126,8 @@ body.dark-theme {
 
 @media (max-width: 1024px) {
     .home{
-        width: 150vh;
         text-align: center;
+        height: 140vh;
     }
     .home-text{
         display: flex;
