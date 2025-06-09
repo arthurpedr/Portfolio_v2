@@ -61,6 +61,7 @@ form{
 input {
     outline: none;
     font-size: 1rem;
+    color: var(--b-input);
 }
 
 label {

@@ -39,19 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
             headers: { 'Accept': 'application/json' }
         }).then(response => {
             if (response.ok) {
-                document.getElementById("mensagemSucesso").textContent = "Mensagem enviada com sucesso!";
-                document.getElementById("mensagemSucesso").style.display = "block";
+                alert("Mensagem enviada com sucesso!");
                 form.reset(); // Limpa o formulário
             } else {
-                document.getElementById("mensagemSucesso").textContent = "Erro ao enviar a mensagem.";
-                document.getElementById("mensagemSucesso").style.color = "red";
-                document.getElementById("mensagemSucesso").style.display = "block";
+                alert("Erro ao enviar a mensagem.");
             }
         }).catch(error => {
             console.error("Erro:", error);
-            document.getElementById("mensagemSucesso").textContent = "Erro inesperado.";
-            document.getElementById("mensagemSucesso").style.color = "red";
-            document.getElementById("mensagemSucesso").style.display = "block";
+            alert("Erro inesperado.");
         });
     });
 });
